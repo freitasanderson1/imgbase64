@@ -12,6 +12,7 @@ with open(img_name, 'rb') as image_file:
 
     im = Image.open(BytesIO(base64.b64decode(base64_bytes)))
 
+    print(f'Tipo: {type(im)} e {type(base64_bytes)}')
     match img_format:
         case 'png':
             im.save(f'{img_name}-convert.png', 'PNG')
