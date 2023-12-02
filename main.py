@@ -8,7 +8,7 @@ img_format = input('Formato de Saída do Arquivo:')
 
 with open(img_name, 'rb') as image_file:
     base64_bytes = base64.b64encode(image_file.read())
-    print(len(base64_bytes))
+    # print(len(base64_bytes))
 
     im = Image.open(BytesIO(base64.b64decode(base64_bytes)))
 
